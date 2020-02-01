@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,600,700,900&display=swap');
+
+html, body {
+  font-family: "Poppins", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  visibility: hidden;
+}
+
+/////////////////////////////////////// Navbar section ///////////////////////////////////////////
+.Navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  background: #F2F2F2;
+  padding: 0 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.nav-links {
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+    li {
+      padding: 0 30px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      height: 100%;
+      box-sizing: border-box;
+      transition: all .3s ease-out;
+
+      &:hover {
+        border-bottom: 5px solid black;
+      }
+    }
+  }
+}
+
+
+/////////////////////////////////////// Hero section ///////////////////////////////////////////
+.hero {
+  .hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+
+    .hero-content-inner {
+      width: 40%; 
+
+      .hero-content-line.heading {
+        overflow: hidden;
+        
+        h1 {
+          font-size: 38px;
+          line-height: 38px;
+        }
+      }
+
+      .hero-content-line.para {
+        overflow: hidden;
+        
+        p {
+          font-size: .9rem;
+        }
+      }
+
+      .hero-content-line.btn {
+        overflow: hidden;
+
+        button {
+          position: relative;
+          margin-top: 5%;
+          border: 3px solid black;
+          background: none;
+          color: black;
+          font-family: "Poppins";
+          padding: 8px 32px;
+          cursor: pointer;
+          transition: color .4s ease-in-out;
+
+          &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: black;
+            width: 0;
+            z-index: -1;
+            height: 100%;
+            transition: width .4s ease-in-out;
+          }
+
+          &:hover {
+            color: white;
+          
+            &:before {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+  .hero-image {
+    width: 55%;
+    height: 65%;
+    position: relative;
+    overflow: hidden;
+
+    .hero-image-inner {
+      height: 100%;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    
+  }
+}
